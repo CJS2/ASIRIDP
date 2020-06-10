@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  
+  </head>
+  </head>
+  <body style="background: url('https://www3.gobiernodecanarias.org/medusa/edublog/ieselrincon/wp-content/uploads/sites/137/2015/11/cropped-fachada03.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;">
+    <nav class="navbar navbar-dark bg-warning">
+      <a class="navbar-brand text-dark" href="#">Claudio</a>
+          <a class="navbar-brand text-dark"  href="/">Inicio <span class="sr-only">(current)</span></a>
+          <a class="navbar-brand text-dark"  href="/view">Jugadores</a>
+          <a class="navbar-brand text-dark"  href="/all">Altas</a>
+          <a class="navbar-brand text-dark"  href="/acdel">Bajas/Actualizar</a>
+    </nav>
+    <h1 style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;font-family:verdana;
+    font-size:50px;
+    color:yellow;
+    text-shadow: 3px  0px 0px black,
+                 0px  3px 0px black,
+                -3px  0px 0px black,
+                 0px -3px 0px black;">He aqui los Jugadores</h1>
+    <center>
+    <table class="table table-striped table-dark" style="width: 100%; height: 40vh;">
+      <thead style="text-align: center; border: 2px solid; font-size: 20px; color: white;">
+        <tr>
+          <th style=" border: 2px solid;" scope="col">Identificador</th>
+          <th style=" border: 2px solid;" scope="col">Nombre</th>
+          <th style=" border: 2px solid;" scope="col">Apellido</th>
+          <th style=" border: 2px solid;" scope="col">Posicion</th>
+        </tr>
+      </thead>
+      <tbody style="text-align: center;">
+        {% for dato in datos %}
+        <tr style="padding: 1rem;">
+          <td style="color: white; border: 2px solid; font-size: 20px;">{{dato[0]}}</td>
+          <td style="color: white; border: 2px solid; font-size: 20px;">{{dato[1]}}</td>
+          <td style="color: white; border: 2px solid; font-size: 20px;">{{dato[2]}}</td>
+          <td style="color: white; border: 2px solid; font-size: 20px;">{{dato[3]}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </center>
+  </body>
+</html>
